@@ -3,16 +3,25 @@ package org.example;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="alien_table")
+
 public class Alien {
 
 @Id
     private int aid;
-@Column(name="alien_name")
+
 
     private String aName;
-@Transient
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
     private String tech;
+    private Laptop laptop;
 
     public String getTech() {
         return tech;
